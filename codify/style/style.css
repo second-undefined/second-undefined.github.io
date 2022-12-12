@@ -1,0 +1,113 @@
+body {
+  background-color: #000;
+}
+
+.header {
+  padding: 30px 0px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+.inner__slesh {
+  color: #1c5dab;
+  font-size: 18px;
+  font-weight: 900;
+  text-shadow: 0px 0px 5px #1c5dab;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.wrapper .card {
+  width: 100%;
+}
+.wrapper .card__image {
+  width: 100%;
+  height: 600px;
+}
+.wrapper .card__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+.wrapper .card__name {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 0px 10px #1c5dab;
+  text-align: center;
+}
+.wrapper .card__first-name {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 0px 10px #1c5dab;
+  text-align: center;
+}
+.wrapper .card__content {
+  padding: 5px;
+}
+
+img {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.main .admin {
+  margin-bottom: 50px;
+}
+.main .admin__title {
+  color: #1c5dab;
+  margin-bottom: 30px;
+  font-size: 46px;
+  text-shadow: 0px 0px 10px #1c5dab;
+}
+.main .teachers {
+  margin-bottom: 50px;
+}
+.main .teachers__title {
+  color: #1c5dab;
+  margin-bottom: 70px;
+  font-size: 46px;
+  text-shadow: 0px 0px 10px #1c5dab;
+}
+.main .teachers .card__content {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.main .teachers .card__profi {
+  text-align: center;
+}
+.main .photo-shop {
+  margin-bottom: 50px;
+}
+.main .photo-shop__title {
+  color: #1c5dab;
+  margin-bottom: 70px;
+  font-size: 46px;
+  text-shadow: 0px 0px 10px #1c5dab;
+}
+.main .photo-shop .card__content {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.main .photo-shop .card__profi {
+  text-align: center;
+}
+.main .teens-support {
+  margin-bottom: 50px;
+}
+.main .teens-support__title {
+  color: #1c5dab;
+  margin-bottom: 70px;
+  font-size: 46px;
+  text-shadow: 0px 0px 10px #1c5dab;
+}
+.main .teens-support .card__profi {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

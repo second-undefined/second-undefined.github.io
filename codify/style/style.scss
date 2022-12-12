@@ -1,0 +1,114 @@
+body{
+    background-color: #000;
+}
+.header{
+    padding: 30px 0px;
+}
+.inner{
+    display: flex;
+    justify-content: space-between;
+
+    &__slesh{
+        color: #1c5dab;
+        font-size: 18px;
+        font-weight: 900;
+        text-shadow: 0px 0px 5px #1c5dab;
+    }
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    .card{
+        width: 100%;
+        &__image{
+            width: 100%;
+            height: 600px;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+            }
+        }
+        &__name{
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 0px 0px 10px #1c5dab;
+            text-align: center;
+        }
+        &__first-name{
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 0px 0px 10px #1c5dab;
+            text-align: center;
+        }
+        &__content{
+            padding: 5px;
+        }
+    }
+}
+img{
+    pointer-events: none;
+    user-select: none;
+}
+.main{
+    .admin{
+        margin-bottom: 50px;
+        &__title{
+            color: #1c5dab;
+            margin-bottom: 30px;
+            font-size: 46px;
+            text-shadow: 0px 0px 10px #1c5dab;
+        }
+        
+    }
+    .teachers{
+        margin-bottom: 50px;
+        &__title{
+            color: #1c5dab;
+            margin-bottom: 70px;
+            font-size: 46px;
+            text-shadow: 0px 0px 10px #1c5dab;
+        }
+        .card{
+            &__content{
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+            }
+            &__profi{
+                text-align: center;
+            }
+        }
+    }
+    .photo-shop{
+        margin-bottom: 50px;
+        &__title{
+            color: #1c5dab;
+            margin-bottom: 70px;
+            font-size: 46px;
+            text-shadow: 0px 0px 10px #1c5dab;
+        }
+        .card{
+            &__content{
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            &__profi{
+                text-align: center; 
+            }
+        }
+    }
+    .teens-support{
+        margin-bottom: 50px;
+        &__title{
+            color: #1c5dab;
+            margin-bottom: 70px;
+            font-size: 46px;
+            text-shadow: 0px 0px 10px #1c5dab;
+        }
+        .card__profi{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,334 @@
+body {
+  width: 100%;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+.header .menu__link {
+  color: #fff;
+}
+.header .bottom {
+  margin-top: 66px;
+  width: 100%;
+  overflow: hidden;
+}
+.header .bottom__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1085px) {
+  .header .bottom__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.header .bottom__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(
+    18px + 47 * ((100vw - 320px) / 1600)
+  );
+  line-height: 140%;
+  max-width: 860px;
+  color: #FFFFFF;
+}
+@media (max-width: 375px) {
+  .header .bottom__title {
+    max-width: 300px;
+  }
+}
+.header .bottom__report {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 1085px) {
+  .header .bottom__report {
+    margin-top: 5%;
+  }
+}
+@media (max-width: 1085px) {
+  .header .bottom__report {
+    margin-top: 9%;
+  }
+}
+.header .bottom__discr {
+  text-align: center;
+}
+@media (max-width: 1085px) {
+  .header .bottom__discr {
+    text-align: left;
+  }
+}
+.header .bottom__report-btn {
+  width: 100%;
+}
+.header .bottom .anim {
+  opacity: 0;
+  transform: translateX(-40%);
+  transition: 0.7s ease 0.3s;
+}
+.header .bottom .anim:last-child {
+  transform: translateX(40%);
+}
+.header .bottom .anim.active {
+  transform: translate(0%);
+  opacity: 1;
+}
+.header .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 15% 0px;
+  transition: 0.5s;
+  transform: scale(0);
+}
+.header .modal.active {
+  transform: scale(1) translate(0%, 0%);
+}
+.header .modal__inner {
+  position: relative;
+}
+.header .modal__cross {
+  position: absolute;
+  top: -100px;
+  right: 0px;
+  transform: rotate(45deg);
+  font-size: 36px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.header .modal__cross:hover {
+  transform: rotate(-135deg);
+}
+.header .modal .report {
+  max-width: 450px;
+  margin: 0 auto;
+  border: 1px solid #D8B152;
+  padding: 25px;
+}
+.header .modal .report__text {
+  margin: 0px 0px 5px 0px;
+}
+.header .modal .report__title {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  line-height: 40px;
+}
+.header .modal .report__subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px 0px 15px;
+}
+.header .modal .report__main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.header .modal .report__main-input {
+  padding: 15px;
+}
+.header .modal .report__btn {
+  padding: 10px 0px;
+  pointer-events: all;
+}
+
+.slider {
+  white-space: nowrap;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 0px;
+  scroll-behavior: smooth;
+}
+.slider__slide {
+  will-change: scroll-position;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  padding: 120px 0px 100px 0px;
+}
+.main .projects {
+  width: 100%;
+}
+.main .projects__row {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  justify-content: space-between;
+  margin-top: 40px;
+}
+@media (max-width: 1190px) {
+  .main .projects__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 835px) {
+  .main .projects__row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+.main .projects .card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 360px;
+  max-height: 360px;
+  margin: 10px 0px;
+}
+@media (max-width: 1190px) {
+  .main .projects .card {
+    width: 100%;
+  }
+  .main .projects .card img {
+    width: 100%;
+  }
+}
+.main .projects .card__title, .main .projects .card__btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+.main .projects .card__title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.main .projects .card__btn {
+  top: 60%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.main .projects .card__bg {
+  transition: 0.3s linear;
+}
+.main .projects .card:hover .card__bg {
+  transform: scale(1.1);
+  filter: grayscale(100%);
+}
+.main .projects .card:hover .card__title {
+  top: 30%;
+}
+.main .projects .card:hover .card__btn {
+  opacity: 1;
+}
+.main .projects .anim {
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+.main .projects .anim:nth-child(2) {
+  transition: transform 0.7s;
+}
+.main .projects .anim:nth-child(3) {
+  transition: transform 0.9s;
+}
+.main .projects .anim.active {
+  transform: scale(1);
+}
+.main .inst__title {
+  max-width: 565px;
+  margin: 100px 0px 40px 0px;
+}
+.main .inst__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0px;
+  padding: 0px 10px;
+}
+@media (max-width: 1210px) {
+  .main .inst__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.main .inst__inst-card {
+  transition: 0.3s;
+  transform: scale(0);
+  margin: 10px;
+}
+.main .inst__inst-card.active {
+  transform: scale(1);
+}
+@media (max-width: 430px) {
+  .main .inst__inst-card {
+    margin: 5px;
+  }
+}
+.main .inst__image {
+  width: 100%;
+  cursor: pointer;
+}
+.main .inst__btn-posit {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.main .question__title {
+  margin: 120px 0px 70px 0px;
+}
+.main .question__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .question .accordion {
+  max-width: 550px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+@media (max-width: 1190px) {
+  .main .question .accordion {
+    min-width: 100%;
+  }
+}
+.main .question .accordion__header {
+  padding: 10px 15px;
+  background: #503D2B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.main .question .accordion__cross {
+  transition: transform 0.3s ease;
+}
+.main .question .accordion__discr {
+  max-height: 0px;
+  background: #503D2B;
+  transition: all 0.3s ease;
+  box-sizing: content-box;
+  padding: 0px 15px;
+}
+.main .question .accordion.open .accordion__discr {
+  padding: 20px 15px;
+}/*# sourceMappingURL=style.css.map */
